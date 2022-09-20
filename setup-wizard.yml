@@ -2,15 +2,37 @@ version: "2"
 fields:
   - title: Swap Endpoint
     id: swap-endpoint
-    description: swap ethereum blockchain endpoint.
+    description: >-
+      Ethereum blockchain endpoint used for on-chain activities. Specify a custom RPC endpoint, or install one of the following packages:
+
+      - Goerli Geth [Install link](http://my.dappnode/#/installer/goerli-geth.dnp.dappnode.eth)
+
+      - Goerli Nethermind [Install link](http://my.dappnode/#/installer/goerli-nethermind.dnp.dappnode.eth)
+      
+      - Goerli Erigon [Install link](http://my.dappnode/#/installer/goerli-erigon.dnp.dappnode.eth)
     target:
       type: environment
       name: BEE_SWAP_ENDPOINT
       service: bee
     required: true
+  - title: ENS resolver RPC
+    id: resolver-options
+    description: >-
+      Ethereum blockchain endpoint used for resolving ENS names. Specify a custom RPC endpoint, or install one of the following packages:
+
+      - Goerli Geth [Install link](http://my.dappnode/#/installer/goerli-geth.dnp.dappnode.eth)
+
+      - Goerli Nethermind [Install link](http://my.dappnode/#/installer/goerli-nethermind.dnp.dappnode.eth)
+
+      - Goerli Erigon [Install link](http://my.dappnode/#/installer/goerli-erigon.dnp.dappnode.eth)
+    target:
+      type: environment
+      name: BEE_RESOLVER_OPTIONS
+      service: bee
+    required: false
   - title: Welcome message
     id: welcome-message
-    description: send a welcome message string during handshakes
+    description: A welcome message string sent during handshakes
     target:
       type: environment
       name: BEE_WELCOME_MESSAGE
@@ -22,6 +44,10 @@ fields:
       type: environment
       name: BEE_FULL_NODE
       service: bee
+    enum:
+      - "true"
+      - "false"
+    required: true
   - id: swarmDataMountpoint
     target:
       type: allNamedVolumesMountpoint

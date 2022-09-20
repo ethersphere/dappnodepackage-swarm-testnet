@@ -1,6 +1,6 @@
 {
-  "name": "swarm.public.dappnode.eth",
-  "version": "1.0.4",
+  "name": "swarm-testnet.public.dappnode.eth",
+  "version": "1.0.0",
   "upstreamVersion": "v1.8.1",
   "upstreamRepo": "ethersphere/bee",
   "upstreamArg": "UPSTREAM_VERSION",
@@ -20,19 +20,19 @@
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rndlabs/DAppNodePackage-swarm.git"
+    "url": "https://github.com/rndlabs/DAppNodePackage-swarm-testnet.git"
   },
   "bugs": {
-    "url": "https://github.com/rndlabs/DAppNodePackage-swarm/issues"
+    "url": "https://github.com/rndlabs/DAppNodePackage-swarm-testnet/issues"
   },
   "requirements": {
     "minimumDappnodeVersion": "0.2.29"
   },
   "links": {
     "homepage": "https://www.ethswarm.org/",
-    "ui": "http://dashboard.swarm.public.dappnode/",
-    "api": "http://bee.swarm.public.dappnode:1633/",
-    "Debug API": "http://bee.swarm.public.dappnode:1635/peers",
+    "ui": "http://dashboard.swarm-testnet.public.dappnode/",
+    "api": "http://bee.swarm-testnet.public.dappnode:1733/",
+    "Debug API": "http://bee.swarm-testnet.public.dappnode:1735/peers",
     "Swarm Documentation": "https://docs.ethswarm.org/"
   },
   "backup": [
@@ -58,7 +58,7 @@
       "name": "Bee P2P Port",
       "description": "P2P port for swarming with other bees",
       "serviceName": "bee",
-      "port": 1634
+      "port": 1734
     }
   ]
 }
