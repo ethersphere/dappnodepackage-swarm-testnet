@@ -1,6 +1,6 @@
 # DAppNodePackage-swarm-testnet
 
-## **Ethereum Swarm Bee**
+## **Ethereum Swarm Bee** (testnet)
 ![avatar](swarm-avatar-min.png)
 
 ### What is Swarm?
