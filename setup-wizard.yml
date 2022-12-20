@@ -1,18 +1,18 @@
 version: "2"
 fields:
-  - title: Swap Endpoint
+  - title: Blockchain RPC Endpoint
     id: swap-endpoint
     description: >-
       Ethereum blockchain endpoint used for on-chain activities. Specify a custom RPC endpoint, or install one of the following packages:
 
       - Goerli Geth [Install link](http://my.dappnode/#/installer/goerli-geth.dnp.dappnode.eth)
-
-      - Goerli Nethermind [Install link](http://my.dappnode/#/installer/goerli-nethermind.dnp.dappnode.eth)
       
       - Goerli Erigon [Install link](http://my.dappnode/#/installer/goerli-erigon.dnp.dappnode.eth)
+
+      - Goerli Nethermind [Install link](http://my.dappnode/#/installer/goerli-nethermind.dnp.dappnode.eth)
     target:
       type: environment
-      name: BEE_SWAP_ENDPOINT
+      name: BEE_BLOCKCHAIN_RPC_ENDPOINT
       service: bee
     required: true
   - title: ENS resolver RPC
@@ -22,9 +22,9 @@ fields:
 
       - Goerli Geth [Install link](http://my.dappnode/#/installer/goerli-geth.dnp.dappnode.eth)
 
-      - Goerli Nethermind [Install link](http://my.dappnode/#/installer/goerli-nethermind.dnp.dappnode.eth)
-
       - Goerli Erigon [Install link](http://my.dappnode/#/installer/goerli-erigon.dnp.dappnode.eth)
+
+      - Goerli Nethermind [Install link](http://my.dappnode/#/installer/goerli-nethermind.dnp.dappnode.eth)
     target:
       type: environment
       name: BEE_RESOLVER_OPTIONS
