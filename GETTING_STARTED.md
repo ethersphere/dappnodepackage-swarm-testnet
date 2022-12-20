@@ -6,7 +6,7 @@ The Swarm *testnet* uses the Görli (Goerli) Testnet for on-chain activities - t
 
 If you wish to use a different RPC endpoint instead of [installing Goerli Geth](http://my.dappnode/#/installer/goerli-geth.dnp.dappnode.eth), you must change the following options:
 
-* Set bee's `BEE_SWAP_ENDPOINT` in the [config](http://my.dappnode/#/packages/swarm-testnet.public.dappnode.eth/config) to your desired Goerli RPC endpoint.
+* Set bee's `BEE_BLOCKCHAIN_RPC_ENDPOINT` in the [config](http://my.dappnode/#/packages/swarm-testnet.public.dappnode.eth/config) to your desired Goerli RPC endpoint.
 * Set the Bee Dashboard [Blockchain RPC URL](http://dashboard.swarm-testnet.public.dappnode/#/settings) to your desired Goerli RPC endpoint.
 
 **NOTE: For the benefit of decentralization and blockchain health, it is recommended to run your own node.**
@@ -49,6 +49,16 @@ Fortunately, the Swarm Foundation have made funding your **testnet node** a rela
 It will take a few minutes for the `gBZZ` and GoerliETH to be deposited to the swarm node's address. The `bee` node will automatically detect this and commence initialization.
 
 For more information on configuring the `bee` node, please refer to the [documentation](https://docs.ethswarm.org/docs/).
+
+### Staking
+
+Since `bee` version `1.10.0`, storage incentives have been activated for staking. The minimum to stake is `10 gBZZ`. Transfer this amount to your node's wallet, and then you may execute the stake by using the following shell command:
+
+```bash
+curl http://bee.swarm-testnet.public.dappnode:1735/stake/100000000000000000 -X POST
+```
+
+The above parameter specifies 10 `gBZZ` in it's atomic units. **CAUTION:** Remember that BZZ uses **16 decimals**.
 
 ### Bee Dashboard
 
