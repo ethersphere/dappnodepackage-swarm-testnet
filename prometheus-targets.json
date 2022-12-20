@@ -1,7 +1,7 @@
 [
     {
       "labels": {
-        "job": "bee"
+        "job": "bee-testnet"
       },
       "targets": ["bee.swarm-testnet.public.dappnode:1735"]
     }
